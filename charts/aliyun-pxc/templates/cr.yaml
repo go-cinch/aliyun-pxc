@@ -159,8 +159,8 @@ spec:
       #        path: /data
       #        type: Directory
       persistentVolumeClaim:
-        #        storageClassName: standard
-        #        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: {{ include "aliyun-pxc.scName" . }}
+        accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
             storage: 6G
@@ -449,8 +449,8 @@ spec:
       #        path: /data
       #        type: Directory
       persistentVolumeClaim:
-        #        storageClassName: standard
-        #        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: {{ include "aliyun-pxc.scName" . }}
+        accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
             storage: 2G
@@ -591,7 +591,7 @@ spec:
         #          supplementalGroups: [1001, 1002, 1003]
         volume:
           persistentVolumeClaim:
-            #            storageClassName: standard
+            storageClassName: {{ include "aliyun-pxc.scName" . }}
             accessModes: [ "ReadWriteOnce" ]
             resources:
               requests:
