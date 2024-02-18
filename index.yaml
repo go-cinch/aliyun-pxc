@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  aliyun-pxc:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2024-02-18T06:11:01.920601919Z"
+    description: aliyun-pxc is a Helm chart for MySQL Percona XtraDB Cluster
+    digest: a2e0ed1fcc46a5af05bcf723432a8b25ba0d049b16da7ac284d561cab0f74cf3
+    name: aliyun-pxc
+    urls:
+    - https://github.com/go-cinch/aliyun-pxc/releases/download/aliyun-pxc-1.0.0/aliyun-pxc-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-02-18T06:11:01.92061339Z"
