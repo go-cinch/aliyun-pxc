@@ -13,3 +13,16 @@ serviceAccount:
 storageClass:
   # If not set, a name is generated using the name template
   name: ""
+
+cluster:
+  name: "mysql-cluster"
+
+# https://docs.percona.com/percona-operator-for-mysql/pxc/users.html?h=password#system-users
+user:
+  root: root_pwd
+  proxyadmin: proxyadmin_pwd
+  operator: operator_pwd
+  xtrabackup: backup_pwd
+  monitor: monitor_pwd
+  clustercheck: clustercheck_pwd
+  replication: replication_pwd

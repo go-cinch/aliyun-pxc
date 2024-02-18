@@ -57,3 +57,24 @@ Create the name of the storage class to use
 {{- define "aliyun-pxc.scName" -}}
 	{{ default .Release.Name .Values.storageClass.name }}
 {{- end -}}
+{{- define "aliyun-pxc.clusterName" -}}
+	{{ default .Release.Name .Values.cluster.name }}
+{{- end -}}
+{{- define "aliyun-pxc.userProxyadmin" -}}
+	{{ default .Release.Name .Values.user.proxyadmin }}
+{{- end -}}
+{{- define "aliyun-pxc.userOperator" -}}
+	{{ default .Release.Name .Values.user.operator }}
+{{- end -}}
+{{- define "aliyun-pxc.userXtrabackup" -}}
+	{{ default .Release.Name .Values.user.xtrabackup }}
+{{- end -}}
+{{- define "aliyun-pxc.userMonitor" -}}
+	{{ default .Release.Name .Values.user.monitor }}
+{{- end -}}
+{{- define "aliyun-pxc.userClustercheck" -}}
+	{{ default .Release.Name .Values.user.clustercheck }}
+{{- end -}}
+{{- define "aliyun-pxc.userReplication" -}}
+	{{ default .Release.Name .Values.user.replication }}
+{{- end -}}

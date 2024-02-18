@@ -2,7 +2,7 @@
 apiVersion: pxc.percona.com/v1
 kind: PerconaXtraDBCluster
 metadata:
-  name: cluster1
+  name: {{ include "aliyun-pxc.clusterName" . }}
   namespace: {{ include "aliyun-pxc.namespace" . }}
   finalizers:
   - delete-pxc-pods-in-order
@@ -17,7 +17,7 @@ spec:
   #    - iam.amazonaws.com/role
   #  ignoreLabels:
   #    - rack
-  #  secretsName: cluster1-secrets
+  secretsName: {{ include "aliyun-pxc.clusterName" . }}-secrets
   #  vaultSecretName: keyring-secret-vault
   #  sslSecretName: cluster1-ssl
   #  sslInternalSecretName: cluster1-ssl-internal
