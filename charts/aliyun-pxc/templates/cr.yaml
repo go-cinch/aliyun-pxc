@@ -3,7 +3,7 @@ apiVersion: pxc.percona.com/v1
 kind: PerconaXtraDBCluster
 metadata:
   name: cluster1
-  namespace: { { include "aliyun-pxc.namespace" . } }
+  namespace: {{ include "aliyun-pxc.namespace" . }}
   finalizers:
   - delete-pxc-pods-in-order
 #    - delete-ssl

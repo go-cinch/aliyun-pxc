@@ -3,7 +3,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: percona-xtradb-cluster-operator
-  namespace: { { include "aliyun-pxc.namespace" . } }
+  namespace: {{ include "aliyun-pxc.namespace" . }}
 rules:
 - apiGroups:
   - pxc.percona.com

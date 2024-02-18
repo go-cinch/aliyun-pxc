@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: percona-xtradb-cluster-operator
-  namespace: { { include "aliyun-pxc.namespace" . } }
+  namespace: {{ include "aliyun-pxc.namespace" . }}
 spec:
   replicas: 1
   selector:
