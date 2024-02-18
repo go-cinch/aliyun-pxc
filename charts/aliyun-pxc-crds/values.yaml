@@ -5,11 +5,3 @@
 namespaceOverride: ""
 nameOverride: ""
 fullnameOverride: ""
-
-serviceAccount:
-  # If not set, a name is generated using the name template
-  name: ""
-  
-storageClass:
-  # If not set, a name is generated using the name template
-  name: ""
