@@ -60,6 +60,9 @@ Create the name of the storage class to use
 {{- define "aliyun-pxc.clusterName" -}}
 	{{ default .Release.Name .Values.cluster.name }}
 {{- end -}}
+{{- define "aliyun-pxc.userRoot" -}}
+	{{ default .Release.Name .Values.user.root }}
+{{- end -}}
 {{- define "aliyun-pxc.userProxyadmin" -}}
 	{{ default .Release.Name .Values.user.proxyadmin }}
 {{- end -}}
