@@ -51,9 +51,3 @@ app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end -}}
 
-{{/*
-Create the name of the storage class to use
-*/}}
-{{- define "aliyun-pxc.scName" -}}
-	{{ default .Release.Name .Values.storageClass.name }}
-{{- end -}}
