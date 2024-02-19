@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   aliyun-pxc:
   - apiVersion: v1
+    appVersion: 1.0.8
+    created: "2024-02-19T14:38:33.598441076Z"
+    description: aliyun-pxc is a Helm chart for MySQL Percona XtraDB Cluster
+    digest: b57cf4fd88232ca34c5f9c753b0ce21a455cd4dbca61dc17de57f1beaf24181a
+    name: aliyun-pxc
+    urls:
+    - https://github.com/go-cinch/aliyun-pxc/releases/download/aliyun-pxc-1.0.8/aliyun-pxc-1.0.8.tgz
+    version: 1.0.8
+  - apiVersion: v1
     appVersion: 1.0.7
     created: "2024-02-19T12:06:41.07185864Z"
     description: aliyun-pxc is a Helm chart for MySQL Percona XtraDB Cluster
@@ -75,6 +84,15 @@ entries:
     version: 1.0.0
   aliyun-pxc-crds:
   - apiVersion: v1
+    appVersion: 1.0.8
+    created: "2024-02-19T14:38:33.725841186Z"
+    description: aliyun-pxc-crds is a Helm chart for aliyun-pxc
+    digest: 008aa024295105530e78aec899839b959b669b860f68c4093c1386819d132987
+    name: aliyun-pxc-crds
+    urls:
+    - https://github.com/go-cinch/aliyun-pxc/releases/download/aliyun-pxc-crds-1.0.8/aliyun-pxc-crds-1.0.8.tgz
+    version: 1.0.8
+  - apiVersion: v1
     appVersion: 1.0.7
     created: "2024-02-19T12:06:41.183918125Z"
     description: aliyun-pxc-crds is a Helm chart for aliyun-pxc
@@ -128,4 +146,4 @@ entries:
     urls:
     - https://github.com/go-cinch/aliyun-pxc/releases/download/aliyun-pxc-crds-1.0.2/aliyun-pxc-crds-1.0.2.tgz
     version: 1.0.2
-generated: "2024-02-19T12:06:41.183984238Z"
+generated: "2024-02-19T14:38:33.725901448Z"
