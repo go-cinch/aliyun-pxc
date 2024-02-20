@@ -72,7 +72,7 @@ spec:
     #    livenessDelaySec: 600
     configuration: |
       [mysqld]
-      wsrep_provider_options="gcache.size=1G; gcache.recover=yes; pc.ignore_sb=true; pc.ignore_quorum=true"
+      wsrep_provider_options="gcache.size=1G; gcache.recover=yes; pc.ignore_sb=false; pc.ignore_quorum=true"
     #      [sst]
     #      xbstream-opts=--decompress
     #      [xtrabackup]
