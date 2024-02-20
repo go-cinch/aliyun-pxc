@@ -60,6 +60,15 @@ Create the name of the storage class to use
 {{- define "aliyun-pxc.clusterName" -}}
 	{{ default .Release.Name .Values.cluster.name }}
 {{- end -}}
+{{- define "aliyun-pxc.clusterSize" -}}
+	{{ default .Release.Name .Values.cluster.size }}
+{{- end -}}
+{{- define "aliyun-pxc.clusterIgnoreSb" -}}
+	{{ default .Release.Name .Values.cluster.ignoreSb }}
+{{- end -}}
+{{- define "aliyun-pxc.clusterIgnoreQuorum" -}}
+	{{ default .Release.Name .Values.cluster.ignoreQuorum }}
+{{- end -}}
 {{- define "aliyun-pxc.userRoot" -}}
 	{{ default .Release.Name .Values.user.root }}
 {{- end -}}

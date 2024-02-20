@@ -16,6 +16,13 @@ storageClass:
 
 cluster:
   name: "mysql-cluster"
+  # ignoreQuorum=true, recommend setting size=3
+  # ignoreQuorum=false, recommend setting size=5, when only one active node, cluster will be non primary
+  size: 5
+  # https://docs.percona.com/percona-xtradb-cluster/8.0/wsrep-provider-index.html#pcignore_sb
+  ignoreSb: false
+  # https://docs.percona.com/percona-xtradb-cluster/8.0/wsrep-provider-index.html#pcignore_quorum
+  ignoreQuorum: false
 
 # https://docs.percona.com/percona-operator-for-mysql/pxc/users.html?h=password#system-users
 user:

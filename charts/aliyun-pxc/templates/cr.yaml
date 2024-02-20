@@ -41,7 +41,7 @@ spec:
     apply: disabled
     schedule: "0 4 * * *"
   pxc:
-    size: 3
+    size: {{ include "aliyun-pxc.clusterSize" . }}
     image: percona/percona-xtradb-cluster:8.0.32-24.2
     autoRecovery: true
     #    expose:
@@ -72,7 +72,7 @@ spec:
     #    livenessDelaySec: 600
     configuration: |
       [mysqld]
-      wsrep_provider_options="gcache.size=1G; gcache.recover=yes; pc.ignore_sb=false; pc.ignore_quorum=true"
+      wsrep_provider_options="gcache.size=1G; gcache.recover=yes; pc.ignore_sb={{ include "aliyun-pxc.clusterIgnoreSb" . }}; pc.ignore_quorum={{ include "aliyun-pxc.clusterIgnoreQuorum" . }}"
     #      [sst]
     #      xbstream-opts=--decompress
     #      [xtrabackup]
@@ -166,7 +166,7 @@ spec:
     gracePeriod: 600
   haproxy:
     enabled: true
-    size: 3
+    size: {{ include "aliyun-pxc.clusterSize" . }}
     image: percona/percona-xtradb-cluster-operator:1.13.0-haproxy
     #    imagePullPolicy: Always
     #    schedulerName: mycustom-scheduler
@@ -319,7 +319,7 @@ spec:
     gracePeriod: 30
   proxysql:
     enabled: false
-    size: 3
+    size: {{ include "aliyun-pxc.clusterSize" . }}
     image: percona/percona-xtradb-cluster-operator:1.13.0-proxysql
     #    imagePullPolicy: Always
     #    configuration: |
