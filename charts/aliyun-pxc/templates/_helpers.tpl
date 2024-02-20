@@ -55,38 +55,38 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Create the name of the storage class to use
 */}}
 {{- define "aliyun-pxc.scName" -}}
-	{{ default mysqlsc .Values.storageClass.name }}
+	{{ default "mysqlsc" .Values.storageClass.name }}
 {{- end -}}
 {{- define "aliyun-pxc.clusterName" -}}
-	{{ default mysql-cluster .Values.cluster.name }}
+	{{ default "mysql-cluster" .Values.cluster.name }}
 {{- end -}}
 {{- define "aliyun-pxc.clusterSize" -}}
-	{{ default 5 .Values.cluster.size }}
+	{{ default "5" .Values.cluster.size }}
 {{- end -}}
 {{- define "aliyun-pxc.clusterIgnoreSb" -}}
-	{{ default false .Values.cluster.ignoreSb }}
+	{{ default "false" .Values.cluster.ignoreSb }}
 {{- end -}}
 {{- define "aliyun-pxc.clusterIgnoreQuorum" -}}
-	{{ default false .Values.cluster.ignoreQuorum }}
+	{{ default "false" .Values.cluster.ignoreQuorum }}
 {{- end -}}
 {{- define "aliyun-pxc.userRoot" -}}
-	{{ default root_pwd .Values.user.root }}
+	{{ default "root_pwd" .Values.user.root }}
 {{- end -}}
 {{- define "aliyun-pxc.userProxyadmin" -}}
-	{{ default proxyadmin_pwd .Values.user.proxyadmin }}
+	{{ default "proxyadmin_pwd" .Values.user.proxyadmin }}
 {{- end -}}
 {{- define "aliyun-pxc.userOperator" -}}
-	{{ default operator_pwd .Values.user.operator }}
+	{{ default "operator_pwd" .Values.user.operator }}
 {{- end -}}
 {{- define "aliyun-pxc.userXtrabackup" -}}
-	{{ default backup_pwd .Values.user.xtrabackup }}
+	{{ default "backup_pwd" .Values.user.xtrabackup }}
 {{- end -}}
 {{- define "aliyun-pxc.userMonitor" -}}
-	{{ default monitor_pwd .Values.user.monitor }}
+	{{ default "monitor_pwd" .Values.user.monitor }}
 {{- end -}}
 {{- define "aliyun-pxc.userClustercheck" -}}
-	{{ default clustercheck_pwd .Values.user.clustercheck }}
+	{{ default "clustercheck_pwd" .Values.user.clustercheck }}
 {{- end -}}
 {{- define "aliyun-pxc.userReplication" -}}
-	{{ default replication_pwd .Values.user.replication }}
+	{{ default "replication_pwd" .Values.user.replication }}
 {{- end -}}
