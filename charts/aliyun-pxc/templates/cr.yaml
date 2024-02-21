@@ -72,6 +72,7 @@ spec:
     #    livenessDelaySec: 600
     configuration: |
       [mysqld]
+      wsrep_debug={{ include "aliyun-pxc.clusterDebug" . }}
       wsrep_provider_options="gcache.size=1G; gcache.recover=yes; pc.ignore_sb={{ include "aliyun-pxc.clusterIgnoreSb" . }}; pc.ignore_quorum={{ include "aliyun-pxc.clusterIgnoreQuorum" . }}"
     #      [sst]
     #      xbstream-opts=--decompress
