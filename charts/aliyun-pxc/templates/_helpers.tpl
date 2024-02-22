@@ -63,6 +63,9 @@ Create the name of the storage class to use
 {{- define "aliyun-pxc.clusterSize" -}}
 	{{ default "5" .Values.cluster.size }}
 {{- end -}}
+{{- define "aliyun-pxc.clusterPause" -}}
+	{{ default "false" .Values.cluster.pause }}
+{{- end -}}
 {{- define "aliyun-pxc.clusterDebug" -}}
 	{{ default "false" .Values.cluster.debug }}
 {{- end -}}

@@ -34,7 +34,7 @@ spec:
   #      kind: ClusterIssuer
   #      group: cert-manager.io
   allowUnsafeConfigurations: false
-  #  pause: false
+  pause: {{ include "aliyun-pxc.clusterPause" . }}
   updateStrategy: SmartUpdate
   upgradeOptions:
     versionServiceEndpoint: https://check.percona.com
